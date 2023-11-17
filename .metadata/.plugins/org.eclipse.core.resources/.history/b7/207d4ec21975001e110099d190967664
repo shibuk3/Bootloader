@@ -1,0 +1,9 @@
+#ifndef __BOOTLOADER_H__
+#define __BOOTLOADER_H__
+#include "usart.h"
+
+/* ACK and NACK bytes*/
+#define BL_ACK   0XA5
+#define BL_NACK  0X7F
+
+#endif

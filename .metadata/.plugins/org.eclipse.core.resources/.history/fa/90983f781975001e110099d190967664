@@ -1,0 +1,4 @@
+#ifndef __BOOTLOADER_H__
+#define __BOOTLOADER_H__
+#include "usart.h"
+#endif

@@ -1,0 +1,21 @@
+05:18:27 **** Incremental Build of configuration Debug for project led_driver ****
+make -j4 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F411RETx -DSTM32F411xE -c -I../Inc -I"..//chip_headers/CMSIS/Include" -I"..//chip_headers/CMSIS/Device/ST/STM32F4xx/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+../Src/main.c: In function 'main':
+../Src/main.c:19:17: warning: 'data' is used uninitialized [-Wuninitialized]
+   19 |                 usart_receive_char(data);
+      |                 ^~~~~~~~~~~~~~~~~~~~~~~~
+arm-none-eabi-gcc -o "led_driver.elf" @"objects.list"   -mcpu=cortex-m4 -T"E:\RTOS_UDEMY\led_driver\STM32F411RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="led_driver.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: led_driver.elf
+ 
+arm-none-eabi-size   led_driver.elf 
+arm-none-eabi-objdump -h -S  led_driver.elf  > "led_driver.list"
+   text	   data	    bss	    dec	    hex	filename
+   1240	      8	   1568	   2816	    b00	led_driver.elf
+Finished building: default.size.stdout
+ 
+Finished building: led_driver.list
+ 
+
+05:18:28 Build Finished. 0 errors, 1 warnings. (took 1s.519ms)
+

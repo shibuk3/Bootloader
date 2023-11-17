@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;led_driver/Src/bootloarder.c&apos; to &apos;bootloader.c&apos;" description="Rename resource &apos;bootloarder.c&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="Src/bootloarder.c" name="bootloader.c" stamp="1698438086424" updateReferences="true"/>
+</session>

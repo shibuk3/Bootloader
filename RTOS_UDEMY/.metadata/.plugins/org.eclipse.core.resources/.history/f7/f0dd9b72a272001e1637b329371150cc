@@ -1,0 +1,19 @@
+#include "led.h"
+
+void led2_init()
+{
+	/*Enable clock access to led port (Port A). If we Enable it after selecting Mode it wont work*/
+	RCC->AHB1ENR |= (1<<0);
+	GPIOA->MODER |= (1<<10);
+	GPIOA->MODER &= ~(1<<11);
+}
+
+void led2_on()
+{
+	GPIOA->ODR |= (1<<5);
+}
+
+void led2_off()
+{
+	GPIOA->ODR &= ~(1<<5);
+}

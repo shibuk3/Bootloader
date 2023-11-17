@@ -1,0 +1,6 @@
+#include "CRC.h"
+
+void crc_init()
+{
+	RCC->AHB1ENR |= (1<<12);
+}

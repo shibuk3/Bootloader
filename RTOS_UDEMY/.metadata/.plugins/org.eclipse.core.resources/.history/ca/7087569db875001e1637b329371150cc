@@ -1,0 +1,8 @@
+#ifndef __GPIO_H__
+#define __GPIO_H__
+#include "stm32f4xx.h"
+
+void gpio_init();
+uint8_t isButtonPressed();
+void GPIO_SetReset_Pin(GPIO_TypeDef* GPIOx, uint16_t GPIO_Pin, GPIO_PinState PinState);
+#endif

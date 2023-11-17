@@ -1,0 +1,15 @@
+#include "gpio.h"
+
+void gpio_init()
+{
+	RCC->AHB1ENR |= (1<<2);
+
+	/*Set push button(i.e. PC13) as input pin*/
+	GPIOC->MODER &= ~(1<<26);
+	GPIOC->MODER &= ~(1<<27);
+}
+
+uint8_t isButtonPressed()
+{
+	return ((GPIOC->IDR & (1<<13)) == (1<<13));
+}

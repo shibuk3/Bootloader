@@ -1,0 +1,61 @@
+#include "led.h"
+#include "usart.h"
+#include "gpio.h"
+#include<stdio.h>
+int main()
+{
+	led2_init();
+	usart_init();
+
+	while(1)
+	{
+		gpio_init();
+//		led2_on();
+//		for(int i=0;i<900000;i++){}
+//		led2_off();
+//		for(int i=0;i<900000;i++){}
+//		char *data;
+//		usart_receive_bytes(data);
+//		usart_send_bytes(data);
+//		if(data == 'h')
+//		{
+//			led2_on();
+//			for(int i=0;i<900000;i++){}
+//		}
+//		else
+//		{
+//			led2_off();
+//			for(int i=0;i<900000;i++){}
+//		}
+//		uint8_t payLoad[] = "Hi, Hello world!\r\n";
+//		usart_send_bytes(payLoad,sizeof(payLoad));
+//		printf("Hello from STM32F4.........\n\r");
+	}
+}
+
+
+//int main()
+//{
+//	gpio_init();
+//	led2_init();
+//	usart_init();
+//	while(1)
+//	{
+//	  if ( isButtonPressed() == 0 )
+//	  {
+//		  payLoad = "BL_DEBUG_MSG:Button is pressed .. going to BL mode\n\r" ;
+//		  usart_send_bytes(payLoad,sizeof(payLoad));
+//		  //we should continue in bootloader mode
+//		  bootloader_uart_read_data();
+//
+//	  }
+//	  else
+//	  {
+//		  payLoad = "BL_DEBUG_MSG:Button is not pressed .. executing user app\n" ;
+//		  usart_send_bytes(payLoad,sizeof(payLoad));
+//			//jump to user application
+//			bootloader_jump_to_user_app();
+//
+//	  }
+//	}
+//}
